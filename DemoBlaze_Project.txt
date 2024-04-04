@@ -1,0 +1,35 @@
+@BeforeClass
+
+system.setProperty (Set the path of you driver)
+
+webdriver driver = new chromedriver();
+
+
+@Test(priority = 1)
+
+1. a. Navigate to demoblaze website
+
+b. click on the log in button in the bar
+
+c. Enter username and pass and click on the log in button
+
+@test (priority = 2)
+
+1. A.) Navigate to the phone category
+
+b.) click on phone product and add it to the cart
+
+c) wait for the "product added " alert to appear and accept the "product added " alert and then close alert
+
+@test (priority = 3)
+
+1. A). Navigate to cart and place order
+
+B). click on the cart menu and click on the checkout button.
+
+c). fill up the form and submit it and wait for the order confirmation mode to appear.
+
+@afterclass
+
+1. close the browser
+
