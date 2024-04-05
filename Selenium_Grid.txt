@@ -1,0 +1,45 @@
+package selGrid;
+
+
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class test1 {
+	
+	String hubUrl=" http://192.168.1.3:4444";
+	String url="https://www.edureka.co/search";
+	WebDriver driver;
+	
+	public void setupGrid()
+	{
+		DesiredCapabilities ds = new DesiredCapabilities();
+		ds.setCapability("browserName","chrome");
+		
+		try {
+			driver = new RemoteWebDriver(new URL(hubUrl),ds);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		driver.get(url);
+		}
+		public void pageTitleValidation() {
+			String title = driver.getTitle();
+			System.out.println("page title :"+title);
+			
+		}
+	
+	
+
+	public static void main(String[] args) {
+		
+		test1 obj = new test1();
+		obj.setupGrid();
+		obj.pageTitleValidation();
+	}
+
+}
