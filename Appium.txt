@@ -1,0 +1,39 @@
+
+public static void main(String[] args) throws MalformedURLException, InterruptedException {
+  // TODO Auto-generated method stub
+  
+  
+  
+  DesiredCapabilities cap = new DesiredCapabilities();
+  
+  cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Demo13dec");
+  cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
+  cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
+  cap.setCapability("appPackage", "io.appium.android.apis");
+  cap.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+  
+  AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+
+
+
+https://stackoverflow.com/questions/48127882/error-could-not-connect-to-server-are-you-sure-its-running-in-appium
+
+https://github.com/appium/appium-desktop/releases
+
+https://www.google.com/search?q=download+apidemos.apk&rlz=1C1JJTC_enIN1054IN1054&oq=download+apidemos.apk&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB7SAQkyMjc5N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+
+https://github.com/appium/appium/blob/master/packages/appium/sample-code/apps/ApiDemos-debug.apk
+
+https://stackoverflow.com/questions/48127882/error-could-not-connect-to-server-are-you-sure-its-running-in-appium
+
+
+                 Appium inspector download link:-->  https://github.com/appium/appium-inspector/releases
+
+ 
+                Node js download link :--> https://nodejs.org/en/download
+
+               Andriod studio download link :-->  https://developer.android.com/studio?gad_source=1&gclid=CjwKCAjw8diwBhAbEiwA7i_sJQR_2_d4y14jVefdsvBk7W3UQTpMCn9pHAFwVBf0Mk2DGwNWaepRexoCk6cQAvD_BwE&gclsrc=aw.ds
+
+               Like JAVA_HOME you need to set up ANDROID_HOME also--> Path of ANDROID_HOME --> C:\Users\DELL\AppData\Local\Android\Sdk (UNDER USER VARIABLE AND SYSTEM VARIABLES BOTH)
+
+              

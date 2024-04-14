@@ -1,0 +1,10 @@
+Thread.sleep(1000);
+		  driver.findElementByAccessibilityId("Preference").click();
+		  driver.findElementByAccessibilityId("3. Preference dependencies").click();
+		  driver.findElementById("android:id/checkbox").click();
+		  Thread.sleep(1000);
+		  driver.findElementByXPath("//android.widget.TextView[@resource-id='android:id/title' and @text='WiFi settings']").click();
+		  Thread.sleep(1000);
+		  driver.findElementById("android:id/edit").sendKeys("hello");
+		  
+		  driver.findElementById("android:id/button1").click();
