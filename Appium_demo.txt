@@ -1,0 +1,41 @@
+package appiumtesting;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+
+
+public class Test1 {
+
+	 public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		
+	
+		 DesiredCapabilities cap = new DesiredCapabilities();
+		  
+		  cap.setCapability("deviceName", "4XSKQW9XLVPNV8MR");
+		  cap.setCapability("platformName", "ANDROID");
+		  cap.setCapability("platformVersion", "13");
+		  cap.setCapability("appPackage", "io.appium.android.apis");
+		  cap.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+		  // cap.setCapability("ignoreHiddenApiPolicyError", "true");
+		 // cap.setCapability("noReset", "true");
+		  AppiumDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"),cap);
+		  
+		  Thread.sleep(1000);
+		  driver.findElementByAccessibilityId("Preference").click();
+		  driver.findElementByAccessibilityId("3. Preference dependencies").click();
+		  driver.findElementById("android:id/checkbox").click();
+		  Thread.sleep(1000);
+		  driver.findElementByXPath("//android.widget.TextView[@resource-id='android:id/title' and @text='WiFi settings']").click();
+		  Thread.sleep(1000);
+		  driver.findElementById("android:id/edit").sendKeys("Shravani");
+		  
+		  driver.findElementById("android:id/button1").click();	
+	}
+
+}
