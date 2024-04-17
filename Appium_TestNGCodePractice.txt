@@ -1,0 +1,129 @@
+DEPENDENCIES OF APPIUM-->
+
+<dependencies>
+  <dependency>
+    <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>7.3.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.8.0</version>
+    <scope>test</scope>
+</dependency>
+  
+  </dependencies>
+
+
+TEST SCRIPT (APPIUM)-->
+
+
+package appiumtesting;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.ScreenOrientation;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.LocksDevice;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.SupportsNetworkStateManagement;
+import io.appium.java_client.android.connection.HasNetworkConnection;
+
+
+public class Test3 {
+	
+	
+
+	@Test
+	public void test4() throws InterruptedException, MalformedURLException {
+		
+		DesiredCapabilities cap = new DesiredCapabilities();
+		  
+		  cap.setCapability("deviceName", "4XSKQW9XLVPNV8MR");
+		  cap.setCapability("platformName", "ANDROID");
+		  cap.setCapability("platformVersion", "13");
+		  cap.setCapability("appPackage", "io.appium.android.apis");
+		  cap.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+		  
+		  AppiumDriver driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"),cap);
+		  
+		  Thread.sleep(1000);
+		/*  driver.findElementByAccessibilityId("Preference").click();
+		  driver.findElementByAccessibilityId("3. Preference dependencies").click();
+		  driver.findElementById("android:id/checkbox").click();
+		  Thread.sleep(1000);
+		  driver.findElementByXPath("//android.widget.TextView[@resource-id='android:id/title' and @text='WiFi settings']").click();
+		  Thread.sleep(1000);
+		  driver.findElementById("android:id/edit").sendKeys("Shravani");
+		  
+		  driver.findElementById("android:id/button1").click();
+		  */
+		  
+		
+		/* ((SupportsNetworkStateManagement) driver).toggleAirplaneMode();
+		
+		  ((SupportsNetworkStateManagement) driver).toggleAirplaneMode();
+		  
+		  
+	
+		  ((AndroidDriver) driver).toggleLocationServices();
+		  
+		  ((SupportsNetworkStateManagement) driver).toggleWifi();
+		  
+		  ((SupportsNetworkStateManagement) driver).toggleData(); 
+		  */
+		  
+		  
+		  // THIS METHOD CHECK IF THE WIFI OF OUR DEVICE IS ON OR OFF
+		  // IF WIFI IS ON THE OUTPUT WILL BE true
+		// IF WIFI IS OFF THE OUTPUT WILL BE false
+	/*boolean var	  = ((HasNetworkConnection) driver).getConnection().isWiFiEnabled();
+
+	System.out.println(var);
+	
+	boolean variable	  = ((HasNetworkConnection) driver).getConnection().isDataEnabled();
+
+	System.out.println(variable);
+	
+	boolean var1	  = ((HasNetworkConnection) driver).getConnection().isAirplaneModeEnabled();
+
+	System.out.println(var1);
+	
+	*/
+	
+	//((AndroidDriver) driver).openNotifications();
+		  
+		  
+	
+	//((LocksDevice) driver).lockDevice();
+	
+	//Thread.sleep(3000);
+	
+	//((LocksDevice) driver).unlockDevice();
+	
+	//changing the screen orientation
+	
+	// this will rotate the device
+	//driver.rotate(ScreenOrientation.LANDSCAPE);
+	//Thread.sleep(3000);
+	// rotate it back to portrait
+	//driver.rotate(ScreenOrientation.PORTRAIT);
+	
+	driver.rotate(ScreenOrientation.LANDSCAPE);
+	Thread.sleep(6000);
+	
+	driver.rotate(ScreenOrientation.PORTRAIT);
+	
+	}
+
+	
+}
+
+
